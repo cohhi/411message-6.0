@@ -24,6 +24,7 @@ input{
 }
 .box1{
     line-height: 50px;
+    padding: 20px;
     width: 250px;
     height: 200px;
     margin: 10px 374px 0 374px;
