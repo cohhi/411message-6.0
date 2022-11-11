@@ -6,8 +6,10 @@
 }
 
 /* 去除input的轮廓 */
-input {
+label input {
     outline: none;
+    width: 30vh;
+
 }
 
 html,

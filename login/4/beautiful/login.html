@@ -16,8 +16,8 @@
        <div class="box">
         
         <div class="pre-box">
-            <h1>WELCOME</h1>
-            <p>JOIN US!</p>
+            <h1>WELCOME 411</h1>
+            <p>FUCK YOU!</p>
             <div class="img-box">
                 <img src="./img/waoku.jpg" alt="">
             </div>
@@ -30,15 +30,21 @@
             </div>
     
             <div class="input-box">
-                <input type="text" placeholder="用户名">
-                <input type="password" placeholder="密码">
-                <input type="password" placeholder="确认密码">
+                <label>
+                    <input type="text" placeholder="用户名">
+                </label>
+                <label>
+                    <input type="password" placeholder="密码">
+                </label>
+                <label>
+                    <input type="password" placeholder="确认密码">
+                </label>
             </div>
    
             <div class="btn-box">
                 <button>注册</button>
            
-                <p onclick="mySwitch()">已有账号?去 <span>登录</span></p>
+                <p onclick="mySwitch()">已有账号?去登录</p>
             </div>
         </div>
 
@@ -49,14 +55,18 @@
             </div>
       
             <div class="input-box">
-                <input type="text" placeholder="用户名">
-                <input type="password" placeholder="密码">
+                <label>
+                    <input type="text" placeholder="用户名">
+                </label>
+                <label>
+                    <input type="password" placeholder="密码">
+                </label>
             </div>
     
             <div class="btn-box">
                 <button>登录</button>
          
-                <p onclick="mySwitch()">没有账号?去 <span>注册</span></p>
+                <p onclick="mySwitch()">没有账号?去注册</p>
             </div>
         </div>
        </div>
@@ -67,11 +77,11 @@
                 if(flag){
 
                     $(".pre-box").css("transform","translateX(100%)")
-                
+
                     $(".pre-box").css("background-color","#c9e0ed")
-         
+
                     $("img").attr("src","./img/wuwu.jpeg")
-                    
+
                 }
                 else {
                     $(".pre-box").css("transform","translateX(0%)")
