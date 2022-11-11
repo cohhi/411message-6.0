@@ -38,7 +38,7 @@
             <div class="btn-box">
                 <button>注册</button>
            
-                <p onclick="mySwitch()">已有账号?去登录</p>
+                <p onclick="mySwitch()">已有账号?去 <span>登录</span></p>
             </div>
         </div>
 
@@ -56,7 +56,7 @@
             <div class="btn-box">
                 <button>登录</button>
          
-                <p onclick="mySwitch()">没有账号?去注册</p>
+                <p onclick="mySwitch()">没有账号?去 <span>注册</span></p>
             </div>
         </div>
        </div>
@@ -82,25 +82,25 @@
              }
        </script>
        <script>
-            const bubleCreate=()=>{
-                // 获取body元素
-                const body = document.body
-                // 创建泡泡元素
-                const buble = document.createElement('span')
-                // 设置泡泡半径
-                let r = Math.random()*5 + 25 //半径大小为25~30
-                // 设置泡泡的宽高
-                buble.style.width=r+'px'
-                buble.style.height=r+'px'
-                // 设置泡泡的随机起点
-                buble.style.left=Math.random()*innerWidth+'px'
-                // 为body添加buble元素
-                body.append(buble)
-                // 4s清除一次泡泡
-                setTimeout(()=>{
-                    buble.remove()
-                },4000)
-            }
+            // const bubleCreate=()=>{
+            //     // 获取body元素
+            //     const body = document.body
+            //     // 创建泡泡元素
+            //     const buble = document.createElement('span')
+            //     // 设置泡泡半径
+            //     let r = Math.random()*5 + 25 //半径大小为25~30
+            //     // 设置泡泡的宽高
+            //     buble.style.width=r+'px'
+            //     buble.style.height=r+'px'
+            //     // 设置泡泡的随机起点
+            //     buble.style.left=Math.random()*innerWidth+'px'
+            //     // 为body添加buble元素
+            //     body.append(buble)
+            //     // 4s清除一次泡泡
+            //     setTimeout(()=>{
+            //         buble.remove()
+            //     },4000)
+            // }
 
             setInterval(() => {
                 bubleCreate()
