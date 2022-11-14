@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>判断闰年</title>
+    <link rel="stylesheet" type="text/css" href="default.css">
+</head>
+<body>
+<div id="center">
+    <div>
+        <div class="background">
+            <h3>比较运算符<br>
+                >    &nbsp;&nbsp;&nbsp;大于<br>
+                <    &nbsp;&nbsp;&nbsp;小于<br>
+                >=   &nbsp;&nbsp;&nbsp;大于等于<br>
+                <=   &nbsp;&nbsp;&nbsp;小于等于<br>
+                !=   &nbsp;&nbsp;&nbsp;不等于<br>
+                ===  &nbsp;&nbsp;&nbsp;判断两个值是否严格相等<br>
+                ==   &nbsp;&nbsp;&nbsp;等于<br>
+            </h3>
+            <hr>
+        </div>
+        <div class="background">
+            <h3>逻辑运算符<br>
+            &&<br>
+            ||<br>
+            ！<br>
+            </h3>
+            <hr>
+        </div>
+        <div class="background">
+            <h3>算数运算符<br>
+                +<br>
+                -<br>
+                *<br>
+                /<br>
+                %<br>
+            </h3>
+            <hr>
+        </div>
+        <div class="background">
+            <h3>判断是否闰年</h3>
+            <h3>
+                let year=1900<br>
+                var isLeapYear=false<br>
+                isLeapYear = (year%400==0)<br>
+                isLeapYear = isLeapYear || (year % 4 == 0 && year % 100 != 0)<br>
+                print("\(year) is")<br>
+                if(!isLeapYear){<br>
+                print("Not")<br>
+                }<br>
+                else if (isLeapYear){<br>
+                print("yes")<br>
+                }<br>
+            </h3>
+        </div>
+        <div class="background">
+            <h3>
+                三目运算符<br>
+                a>b?a:b
+            </h3>
+        </div>
+
+        <div class="background">
+            <h3>
+                &溢出运算符<br>
+                let y:Int8=120<br>
+                let z= y&+10<br>
+                print(z)<br>
+            </h3>
+        </div>
+        <div class="background">
+            类型转换
+            <h3>
+                let a:Int16=200<br>
+                let b:Int8=50<br>
+                let =a+Int16(b)<br>
+            </h3>
+        </div>
+        <br>
+        <h2>
+            swift中参与运算时类型必须一致<br>
+            swift中不能使自增或者自减  "++  --"<br>
+            小知识:小数不能和整数相乘<br>
+        </h2>
+    </div>
+    <div>
+        <a href="2.html"><button>上一页,基本数据类型与语法</button></a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="4.html"><button>下一页,switch语句</button></a>
+    </div>
+</div>
+</body>
+</html>
