@@ -1,0 +1,56 @@
+<!-- author:steam-404 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>功德增加器</title>
+    <script src="https://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <!-- 引入jquery-->
+</head>
+<style>
+    #body{
+        width: 80vh;
+        height: 50vh;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+        background: slategray;
+    }
+    img{
+        width: 50vh;
+        height: 50vh;
+    }
+</style>
+<script>
+    let num=1
+    let count=0;
+    num=parseInt(num)
+    count=parseInt(count)
+    $(function(){
+        $("#ikun").click(function (){
+            let message=$("#show")
+            message.hide();
+            count=parseInt(count)
+            num=parseInt(num)
+            count=count+num;
+            message.before("\n功德+"+num+"\t当前功德:"+count+"<br>")
+        })
+    })
+    function message(){
+        let number;
+        number=prompt("请输入功德数")
+        num=number
+    }
+</script>
+<body>
+<p>点击木鱼添加功德</p>
+    <div id="body">
+        <img id="ikun" src="01.jpeg" alt="alt">
+        <p><button onclick="message()">修改每次功德数</button></p>
+    </div>
+</body>
+<p id="show" style="color: blue"></p> <br>
+</html>
