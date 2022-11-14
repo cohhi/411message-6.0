@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>MySql</title>
+    <link rel="stylesheet" type="text/css" href="work/default.css">
+</head>
+<style>
+    body{
+        background: #EFE5A7;
+    }
+    button {
+        --border-radius: 15px;
+        --border-width: 4px;
+        appearance: none;
+        position: relative;
+        width: 200px;
+        height: 70px;
+        border: 0;
+        background-color: #EFE5A7;
+        font-family: "Roboto", Arial, "Segoe UI", sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        color: #F903FF;
+        z-index: 2;
+        transition: 0.6s;
+    }
+    button::after {
+        --m-i: linear-gradient(#000,#000);
+        --m-o: content-box, padding-box;
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        padding: var(--border-width);
+        border-radius: var(--border-radius);
+        background-image: conic-gradient(
+                #488cfb,
+                #29dbbc,
+                #ddf505,
+                #ff9f0e,
+                #e440bb,
+                #655adc,
+                #488cfb
+        );
+        -webkit-mask-image: var(--m-i), var(--m-i);
+        mask-image: var(--m-i), var(--m-i);
+        -webkit-mask-origin: var(--m-o);
+        mask-origin: var(--m-o);
+        -webkit-mask-clip: var(--m-o);
+        mask-composite: exclude;
+        -webkit-mask-composite: destination-out;
+        filter: hue-rotate(0);
+        animation: rotate-hue linear 500ms infinite;
+        animation-play-state: paused;
+    }
+
+    button:hover{
+        --border-radius: 8px;
+        --border-width: 6px;
+        width: 250px;
+        height: 90px;
+    }
+    button:after {
+        animation-play-state: running;
+    }
+
+    @keyframes rotate-hue {
+        to {
+            filter: hue-rotate(1turn);
+        }
+    }
+
+    button,
+    button::after {
+        box-sizing: border-box;
+    }
+
+    button:active {
+        --border-width: 5px;
+    }
+    p{
+        text-align: center;
+        font-size: 20px;
+        color: #303030;
+    }
+    h4{
+    }
+</style>
+<body>
+<div>
+    <div>
+        <p style="text-align: center">MySql</p>
+    </div>
+    <div>
+        <div>
+            9月<br>
+            <a href="work/1.html"><button>9月7日,MySQL安装</button></a>
+            <a href="work/2.html"><button>9月9日,安装中的错误</button></a>
+            <a href="work/3.html"><button>9月14日,MySQL基础</button></a>
+            <a href="work/4.html"><button>9月16日,MySQL创建</button></a>
+            <a href="work/5.html"><button>9月23日,MySQL,增删改</button></a>
+            <a href="work/6.html"><button>9月28日,主键约束</button></a>
+            <a href="work/7.html"><button>9月30日,插入数据</button></a>
+            <br>
+        </div>
+        <div>
+            10月
+            <br>
+            <a href="work/8.html"><button>10月4日,where语句</button></a>
+            <a href="work/9.html"><button>10月4日,big homework</button></a>
+            <a href="work/10.html"><button>10月11日,免密</button></a>
+            <a href="work/11.html"><button>10月12日,查询语句</button></a>
+            <a href="work/12.html"><button>10月18日,小案例</button></a>
+            <a href="work/13.html"><button>10月19日,查询语句</button></a>
+            <a href="work/14.html"><button>10月25日,tb_worker</button></a>
+            <a href="work/15.html"><button>10月26日,函数</button></a>
+        </div>
+        <div>
+            11月
+            <br>
+            <a href="work/16.html"><button>11月1日,实训7</button></a>
+            <a href="work/17.html"><button>11月8日,多表</button></a>
+            <a href="work/18.html"><button>11月9日,web服务</button></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

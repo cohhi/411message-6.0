@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>411</title>
+    <link rel="stylesheet" href="./images/logo.ico" type="image/x-icon">
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+        }
+            
+        /* 先重置一下html，消除HTML标签默认的内外边距 */
+        .wrap {
+            width: 800px;
+            margin: 0 auto;
+        }
+
+        /* 对导航的内容设置一个主体为800px的宽并使其居中 */
+        .clear {
+            clear: both;
+        }
+
+        /* 清除浮动 */
+        a {
+            text-decoration-line: none;
+        }
+
+        /* 去掉默认a标签的下划线 */
+        ul,
+        li {
+            list-style: none;
+        }
+
+        nav .level>li {
+            float: left;
+            width: 16.66%;
+            text-align: center;
+            background: bisque;
+            padding: 10px 0;
+            font-size: 16px;
+            transition: .4s;
+        }
+
+        nav .level>li a {
+            color: black;
+        }
+
+        nav .level>li:hover {
+            background: rgb(232, 181, 181);
+        }
+
+        /* 设置鼠标滑过后的样式 */
+
+        nav .two {
+            display: none;
+            margin-top: 10px;
+        }
+
+        /* 先使二级菜单的内容隐藏 */
+        nav .level>li:hover .two {
+            display: block;
+        }
+
+        /* 鼠标滑过一级菜单后的显示二级菜单 */
+        nav .two li  {
+            padding: 5px 0;
+            transition: .4s;
+            cursor: pointer;
+        }
+
+        nav .two li:hover {
+            background: pink;
+        }
+        #plane{
+            color: #fff;
+            font-size: 70px;
+            /* 绝对定位 */
+            position: absolute;
+            /* 弹性布局 水平+垂直居中 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <nav>
+        <div class="wrap">
+            <ul class="level">
+                <li><a href="./Login/beautiful/login.html">登录</a></li>
+                <li>
+                    <a href="">每日作业</a>
+                    <ul class="two">
+                        <li><a href="./work/study/Mysql/index.html">MySQL</a></li>
+                        <li><a href="./work/study/JavaScript/index.html">JavaScript</a></li>
+                        <li><a href="./work/study/kali/index.html"></a>kali</li>
+                        <li><a href="./work/study/Linux/index.html">Linux</a></li>
+                        <li><a href="./work/study/Penetration test for kali/index.html">Penetration test for kali</a></li>
+                        <li><a href="./work/study/Python/Python.html">Python</a></li>
+                        <li><a href="./work/study/Swift/index.html">Swift</a></li>
+                        <li><a href="./work/study/test/index.html">软件测试</a></li>
+                        <li><a href="./work/study/Web/index.html">web</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">小玩意</a>
+                    <ul class="two">
+                        <li><a href="./son/Timetable.html">课表</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">开发人员</a>
+                    <ul class="two">
+                        <li><a href="https://github.com/steam-404/411message-6.0">Github仓库</a></li>
+                        <li><a href="https://github.com/goufugui123">富贵</a></li>
+                        <li><a href="https://github.com/steam-404"></a>steam-404</li>
+                        <li><a href="https://github.com/ajwosm"></a>cheng</li>
+                        <li><a href="https://github.com/IKUN-LUO">Luo</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">开发中</a>
+                    <ul class="two">
+                    </ul>
+                </li>
+                <li>
+                    <a href="">开发中</a>
+                    <ul class="two">
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <h2 contenteditable="true">welcome to 411</h2>
+    </div>
+    <div id="plane">
+        <i class="fa fa-paper-plane" aria-hidden="true"></i>
+    </div>
+    <script>
+        let plane=document.getElementById('plane');
+        let deg=0,ex=0,ey=0,vx=0,vy=0,count=0;
+        window.addEventListener('mousemove',(e)=>{
+            ex=e.x-plane.offsetLeft-plane.clientWidth/2;
+            ey=e.y-plane.offsetTop-plane.clientHeight/2;
+            deg=360*Math.atan(ey/ex)/(2*Math.PI)+45;
+            if(ex<0){
+                deg+=180;
+            }
+            count=0;
+        })
+        function draw(){
+            plane.style.transform='rotate('+deg+'deg)';
+            if(count<100){
+                vx+=ex/100;
+                vy+=ey/100;
+            }
+            plane.style.left=vx+'px';
+            plane.style.top=vy+'px';
+            count++;
+        }
+        setInterval(draw, 1);
+    </script>
+</body>
+</html>
+<script src="./live2dw/lib/L2Dwidget.min.js"></script>
+<script>
+    function readTextFile(file, callback) {
+        var rawFile = new XMLHttpRequest();
+        rawFile.overrideMimeType("application/json");
+        rawFile.open("GET", file, true);
+        rawFile.onreadystatechange = function () {
+            if (rawFile.readyState === 4 && rawFile.status == "200") {
+                callback(rawFile.responseText);
+            }
+        }
+        rawFile.send(null);
+    }
+    var jsonData = null;
+    readTextFile("./live2dw/live2d-widget-model-shizuku/assets/shizuku.model.json", function (text) {
+        jsonData = JSON.parse(text);
+    })
+
+    L2Dwidget.init({
+        model: {
+            // 模型
+            jsonPath: jsonData, //"./live2dw/live2d-widget-model-shizuku/assets/shizuku.model.json",
+            scale: 1 //模型缩放比例
+        },
+        display: {
+            position: "left", //模型的位置（左or右）
+            width: 300, //模型宽度
+            height: 600, //模型高度
+            hOffset: 0, //模型水平偏移量
+            vOffset: -20 //模型垂直偏移量
+        },
+        mobile: {
+            show: true, //手机端是否显示
+            scale: 1 //缩放比例
+        },
+        react: {
+            opacity: 1 //模型不透明度
+        }
+    })
+</script>
