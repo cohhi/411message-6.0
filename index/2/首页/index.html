@@ -6,15 +6,17 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
     <title>411</title>
     <link rel="stylesheet" href="./images/logo.ico" type="image/x-icon">
+    <script src="jQuery/jQuery.js"></script>
+    <!--    引入jquery-->
     <style type="text/css">
         * {
             padding: 0;
             margin: 0;
         }
-            
+
         /* 先重置一下html，消除HTML标签默认的内外边距 */
         .wrap {
-            width: 800px;
+            width: 80vh;
             margin: 0 auto;
         }
 
@@ -32,144 +34,165 @@
         ul,
         li {
             list-style: none;
+            margin: 1vh;
         }
 
-        nav .level>li {
+        nav .level > li {
             float: left;
             width: 16.66%;
             text-align: center;
-            background: bisque;
+            background-image: linear-gradient(45deg, #00BFFF, #98FB98);
             padding: 10px 0;
             font-size: 16px;
             transition: .4s;
+            border-radius: 40px;
         }
 
-        nav .level>li a {
-            color: black;
+        nav .level > li a {
+            color: #ff59be;
         }
 
-        nav .level>li:hover {
-            background: rgb(232, 181, 181);
+        nav .level ul:hover {
+
         }
 
-        /* 设置鼠标滑过后的样式 */
 
-        nav .two {
-            display: none;
-            margin-top: 10px;
+        /*右下角视频的处理*/
+        .tailRight{
+            position: absolute;
+            right: 0;
+            top: 0;
         }
-
-        /* 先使二级菜单的内容隐藏 */
-        nav .level>li:hover .two {
-            display: block;
+        .tailRight video{
+            height: 60vh;
+            width: 23vh;
         }
-
-        /* 鼠标滑过一级菜单后的显示二级菜单 */
-        nav .two li {
-            padding: 5px 0;
-            transition: .4s;
-            cursor: pointer;
-        }
-
-        nav .two li:hover {
-            background: pink;
+        .tailRight video source{
+            border-radius: 30px;
         }
     </style>
     <link rel="stylesheet" href="./css/index.css">
+    <script>
+        <!--    隐藏li-->
+        $(document).ready(function () {
+            $(".a2").hide()
+            $(".b2").hide()
+            $(".c2").hide()
+        })
+    </script>
+    <script>
+        <!--        jQuery事件处理-->
+
+        $(function () {
+            $(".twoP").click(function () {
+                $(".a2").fadeToggle("normal")
+            })
+        })
+        $(function () {
+            $(".twoP").mouseenter(function () {
+                $(".a2").fadeIn("normal")
+            })
+        })
+        $(function () {
+            $(".two").mouseleave(function () {
+                $(".a2").fadeOut("normal")
+            })
+        })
+        //每日作业点击/悬停事件  显示/隐藏
+
+
+        $(function () {
+            $(".threeP").click(function () {
+                $(".b2").fadeToggle("normal")
+            })
+        })
+        $(function () {
+            $(".threeP").mouseenter(function () {
+                $(".b2").fadeIn("normal")
+            })
+        })
+        $(function () {
+            $(".three").mouseleave(function () {
+                $(".b2").fadeOut("normal")
+            })
+        })
+        //小玩意点击/悬停事件  显示/隐藏
+
+
+        $(function () {
+            $(".fourP").click(function () {
+                $(".c2").fadeToggle("normal")
+            })
+        })
+        $(function () {
+            $(".fourP").mouseenter(function () {
+                $(".c2").fadeToggle("normal")
+            })
+        })
+        $(function () {
+            $(".four").mouseleave(function () {
+                $(".c2").fadeToggle("normal")
+            })
+        })
+        //开发人员点击/悬停事件  显示/隐藏
+    </script>
 </head>
 <body>
-    <nav>
-        <div class="wrap">
-            <ul class="level">
-                <li><a href="./Login/beautiful/login.html">登录</a></li>
-                <li>
-                    <a href="">每日作业</a>
-                    <ul class="two">
-                        <li><a href="./work/study/Mysql/index.html">MySQL</a></li>
-                        <li><a href="./work/study/JavaScript/index.html">JavaScript</a></li>
-                        <li><a href="./work/study/kali/index.html"></a>kali</li>
-                        <li><a href="./work/study/Linux/index.html">Linux</a></li>
-                        <li><a href="./work/study/Penetration test for kali/index.html">Penetration test for kali</a></li>
-                        <li><a href="./work/study/Python/Python.html">Python</a></li>
-                        <li><a href="./work/study/Swift/index.html">Swift</a></li>
-                        <li><a href="./work/study/test/index.html">软件测试</a></li>
-                        <li><a href="./work/study/Web/index.html">web</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="">小玩意</a>
-                    <ul class="two">
-                        <li><a href="./son/Timetable.html">课表</a></li>
-                        <li><a href="./game/木鱼/index.html">功德添加器</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="">开发人员</a>
-                    <ul class="two">
-                        <li><a href="https://github.com/steam-404/411message-6.0" title="闭源中...">Github仓库</a></li>
-                        <li><a href="https://github.com/steam-404/411message">上个版本仓库</a></li>
-                        <li><a href="https://github.com/goufugui123">富贵</a></li>
-                        <li><a href="https://github.com/steam-404"></a>steam-404</li>
-                        <li><a href="https://github.com/ajwosm"></a>cheng</li>
-                        <li><a href="https://github.com/IKUN-LUO">Luo</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="">开发中</a>
-                    <ul class="two">
-                    </ul>
-                </li>
-                <li>
-                    <a href="">开发中</a>
-                    <ul class="two">
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <div class="container">
-        <h2 contenteditable="true">welcome to 411</h2>
+<nav>
+    <div class="wrap">
+        <ul class="level">
+            <li><a href="./Login/beautiful/login.html" title="登录">Login</a></li>
+            <li>
+                <p class="twoP" title="认真写作业,不要抄袭哦~">每日作业</p>
+                <ul class="two">
+                    <li class="a2"><a href="./work/study/Mysql/index.html">MySQL</a></li>
+                    <li class="a2"><a href="./work/study/JavaScript/index.html">JavaScript</a></li>
+                    <li class="a2"><a href="./work/study/kali/index.html"></a>kali</li>
+                    <li class="a2"><a href="./work/study/Linux/index.html">Linux</a></li>
+                    <li class="a2"><a href="./work/study/Penetration test for kali/index.html">Penetration test for
+                        kali</a></li>
+                    <li class="a2"><a href="./work/study/Python/Python.html">Python</a></li>
+                    <li class="a2"><a href="./work/study/Swift/index.html">Swift</a></li>
+                    <li class="a2"><a href="./work/study/test/index.html">软件测试</a></li>
+                    <li class="a2"><a href="./work/study/Web/index.html">web</a></li>
+                </ul>
+            </li>
+            <li>
+                <p class="threeP" title="没用且有病">小玩意</p>
+                <ul class="three">
+                    <li class="b2"><a href="./son/Timetable.html">课表</a></li>
+                    <li class="b2"><a href="./game/木鱼/index.html">功德添加器</a></li>
+                </ul>
+            </li>
+            <li>
+                <p class="fourP" title="内部人员装B用">开发人员</p>
+                <ul class="four">
+                    <li class="c2"><a href="https://github.com/steam-404/411message-6.0"
+                                      title="闭源中...">Github仓库</a></li>
+                    <li class="c2"><a href="https://github.com/steam-404/411message">上个版本仓库</a></li>
+                    <li class="c2"><a href="https://github.com/goufugui123">富贵</a></li>
+                    <li class="c2"><a href="https://github.com/steam-404">steam-404</a></li>
+                    <li class="c2"><a href="https://github.com/ajwosm">cheng</a></li>
+                    <li class="c2"><a href="https://github.com/IKUN-LUO">Luo</a></li>
+                </ul>
+            </li>
+            <li>
+                <a class="a" href="">开发中</a>
+        </ul>
     </div>
-    
-</body>
-</html>
-<script src="./live2dw/lib/L2Dwidget.min.js"></script>
-<script>
-    function readTextFile(file, callback) {
-        var rawFile = new XMLHttpRequest();
-        rawFile.overrideMimeType("application/json");
-        rawFile.open("GET", file, true);
-        rawFile.onreadystatechange = function () {
-            if (rawFile.readyState === 4 && rawFile.status == "200") {
-                callback(rawFile.responseText);
-            }
-        }
-        rawFile.send(null);
-    }
-    var jsonData = null;
-    readTextFile("./live2dw/live2d-widget-model-shizuku/assets/shizuku.model.json", function (text) {
-        jsonData = JSON.parse(text);
-    })
+</nav>
+<div class="container">
+    <h2 contenteditable="true">welcome to 411</h2>
+</div>
+<br>
+<div class="tailLeft">
+</div>
 
-    L2Dwidget.init({
-        model: {
-            // 模型
-            jsonPath: jsonData, //"./live2dw/live2d-widget-model-shizuku/assets/shizuku.model.json",
-            scale: 1 //模型缩放比例
-        },
-        display: {
-            position: "left", //模型的位置（左or右）
-            width: 300, //模型宽度
-            height: 600, //模型高度
-            hOffset: 0, //模型水平偏移量
-            vOffset: -20 //模型垂直偏移量
-        },
-        mobile: {
-            show: true, //手机端是否显示
-            scale: 1 //缩放比例
-        },
-        react: {
-            opacity: 1 //模型不透明度
-        }
-    })
-</script>
+<div class="tailRight">
+    <video autoplay="autoplay" controls="controls" loop="loop">
+        <source type="video/mp4" src="./image/mp4/dance.mp4"></video>
+</div>
+</body>
+
+</html>
+
