@@ -1,0 +1,23 @@
+<!--author:steam-404-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1-100之间所有整数 偶数和 与基数和</title>
+</head>
+<body>
+<script>
+    let message1 = 0;//定义偶数
+    let message2 = 0;//定义记述
+    for (let i = 1; i <= 100; i++) {
+        if (i % 2 === 0) {
+            message1+=i;
+        } else if (i % 2 !== 0) {
+            message2+=i;
+        }
+    }
+    console.log("偶数和:"+message1)
+    console.log("奇数和:"+message2)
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!--author:steam-404-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>获取数组最大值</title>
+</head>
+<body>
+<script>
+  let message=[2,6,1,77,52,25,7,99];
+  let max=message[0];
+  for (let i=0;i<message.length;i++){
+    if(message[i]>max){
+      max=message[i];
+    }
+  }
+  console.log("max is :"+max)
+</script>
+</body>
+</html>

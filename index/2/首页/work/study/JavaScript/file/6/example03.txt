@@ -1,0 +1,19 @@
+<!--author:steam-404-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>重复执行不同代码</title>
+</head>
+<body>
+<script>
+    for (let i = 1; i <= 100; i++) {
+        if (i === 1) {
+            console.log("当前是第1次")
+        } else if (i === 100) {
+            console.log("当前是第100次")
+        }
+    }
+</script>
+</body>
+</html>

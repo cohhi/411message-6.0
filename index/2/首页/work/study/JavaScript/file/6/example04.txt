@@ -1,0 +1,18 @@
+<!--author:steam-404-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1-100之间所有整数求和和平均数</title>
+</head>
+<body>
+<script>
+    let message=0;
+    for (let i=1;i<=100;i++){
+        message+=i;
+    }
+    console.log("求和:"+message)
+    console.log("平均值:"+(message/100))
+</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!--author:steam-404-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1-100之间能被3整除的数之和</title>
+</head>
+<body>
+<script>
+    let message = 0;
+    for (let i = 1; i <= 100; i++) {
+        if(i%3===0){
+            message+=i;
+        }
+    }
+    console.log("1-100之间能被3整除的数之和:"+message)
+</script>
+</body>
+</html>

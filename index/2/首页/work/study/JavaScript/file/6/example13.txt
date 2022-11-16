@@ -1,0 +1,19 @@
+<!--author:steam-404-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>将数组转化为字符串</title>
+</head>
+<body>
+<script>
+  let message1=["red","green","blue","pink"];
+  let message2=message1[0];
+  let message3="|"
+  for (let i=1;i<message1.length;i++){
+    message2+=message3+message1[i];
+  }
+  console.log(message2)
+</script>
+</body>
+</html>

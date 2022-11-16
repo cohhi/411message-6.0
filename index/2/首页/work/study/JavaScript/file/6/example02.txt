@@ -1,0 +1,16 @@
+<!--author:steam-404-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>重复执行相同代码</title>
+</head>
+<body>
+<script>
+    let message=prompt("请输入次数")
+    for (let i=1;i<=message;i++){
+        console.log("重要的事情说"+message+"遍")
+    }
+</script>
+</body>
+</html>

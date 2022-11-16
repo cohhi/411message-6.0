@@ -1,0 +1,139 @@
+<!--author:steam-404-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JDBC</title>
+    <link rel="stylesheet" href="default.css">
+</head>
+<style>
+    a {
+        text-decoration: none;
+        color: red;
+    }
+
+    h2 {
+        color: #7b52b9;
+    }
+</style>
+<body>
+<div id="center">
+    <div class="background">
+        <p>使用JDBC连接本地数据库</p>
+        <p>本教程包含以下元素</p>
+        <a href="#create Web Project">创建Web服务</a> <br><br><br>
+        <a href="#tomcat">配置tomcat</a> <br><br><br>
+        <a href="#JDBC">开始写代码</a> <br><br><br>
+        <a href="#chinese">eclipse汉化</a> <br><br><br>
+        <h3>本教程以eclipse2022-09版本为例</h3>
+        <h2>第一步,打开eclipse。这个界面有点小帅</h2>
+        <img src="picture/20/eclipse.png" alt="">
+        <h2 id="create Web Project">第二步,下载并创建Web服务</h2>
+        <h3>打开eclipse-help-install New Software</h3>
+        <img src="picture/20/1.png" alt=""> <br>
+        <h3>点击ADD-向location添加内容&nbsp;&nbsp;&nbsp;https://download.eclipse.org/releases/2022-06/202206151000&nbsp;&nbsp;&nbsp;-点击Add</h3>
+        <img src="picture/20/2.png" alt=""> <br>
+        <h3>选择如下选项-点击Next</h3>
+        <img src="picture/20/3.png" alt=""> <br>
+        <h3>点击Next</h3>
+        <img src="picture/20/4.png" alt=""> <br>
+        <h3>再次点击Next</h3>
+        <img src="picture/20/5.png" alt=""> <br>
+        <h3>选择同意协议-点击Finish</h3>
+        <img src="picture/20/6.png" alt=""> <br>
+        <h3>此时右下角正在下载</h3>
+        <img src="picture/20/7.png" alt=""> <br>
+        <h3>下载过程中会弹出如下页面-全部勾选-点击Trust Selected</h3>
+        <img src="picture/20/8.png" alt=""> <br>
+        <h3>完成后选择重启</h3>
+        <img src="picture/20/9.png" alt=""> <br>
+        <h3>新建动态web项目</h3>
+        <h3>点击File-New-Other</h3>
+        <img src="picture/20/10.png" alt="">
+        <h3>选择Web-Dynamic Web Project&nbsp;&nbsp;&nbsp;点击Next</h3>
+        <img src="picture/20/11.png" alt="">
+        <h3>主目录应该是这样</h3>
+        <img src="picture/20/12.png" alt="">
+        <br><br><br>
+        <p id="tomcat">eclipse配置tomcat</p>
+        <h3>先去下载tomcat</h3>
+        <a href="https://tomcat.apache.org">https://tomcat.apache.org</a>
+        <h3>以10.0.27为例-点击Downloads</h3>
+        <img src="picture/20/13.png" alt="">
+        <h3>下载64位 zip文件</h3>
+        <img src="picture/20/14.png" alt="">
+        <h3>下载后解压</h3>
+        <h3>打开eclipse选择&nbsp;&nbsp;&nbsp;window-preferences</h3>
+        <img src="picture/20/15.png" alt="">
+        <h3>搜索server-选择人server下Runtime Environment-点击Add</h3>
+        <img src="picture/20/16.png" alt="">
+        <h3>选择Apache-Apache Tomcat v10.0点击Finish</h3>
+        <img src="picture/20/17.png" alt="">
+        <h3>选择路径-点击Finish</h3>
+        <img src="picture/20/18.png" alt="">
+        <h3>点击Apply and Close</h3>
+        <img src="picture/20/19.png" alt="">
+        <h3>测试一下环境</h3>
+        <h3>选择WebProject-新建jsp文件</h3>
+        <img src="picture/20/20.png" alt="">
+        <h3>选择webapp-默认命名为NewFile.jsp-点击Finish</h3>
+        <img src="picture/20/21.png" alt="">
+        <h3>给body里面加一些内容</h3>
+        <img src="picture/20/22.png" alt="">
+        <h3>点击启动按钮</h3>
+        <img src="picture/20/23.png" alt="">
+        <h3>然后就会自动跳转网页,不跳转的话,访问这个链接http://localhost:8080/WebProject/NewFile.jsp</h3>
+        <h3>应该长这样</h3>
+        <br>
+        <img src="picture/20/24.png" alt="">
+        <h2 id="JDBC">开始写代码</h2>
+        <h3>首先要有数据库</h3>
+        <h3>先创建一个表,用来存储用户名和密码</h3>
+        <h3>打开mysql</h3>
+        <h3>
+            创建数据库:create database school<br>
+            选择数据库:use school <br>
+            创建一个表: <br>
+            create table student( <br>
+            user varchar(10) not null, <br>
+            password varchar(10) not null <br>
+            )default charset utf8; <br>
+        </h3>
+        <br><br><br>
+        <h3>先插入一条数据测试一下</h3>
+        <h3>打开MySQL输入</h3>
+        <h3>use school&nbsp;&nbsp;&nbsp;//选择数据库</h3>
+        <h3>insert into student values('蔡徐坤','ikun');&nbsp;&nbsp;&nbsp;//插入数据</h3>
+        <h3>select * from student;&nbsp;&nbsp;&nbsp;查看student表</h3>
+        <h3>返回的数值应该是这样</h3>
+        <img src="picture/20/25.png" alt="">
+        <br><br><br>
+        <h3>接下来开始写JDBC</h3>
+
+        <h2 id="chinese">eclipse汉化</h2>
+        <h3>看到这里可能会有英语不太好的同学发出疑问了,为什么不从最开始教汉化</h3>
+        <h3>~哎,我不听我不听,我就是不听,我就要放在最后</h3>
+
+
+    </div>
+    <div>
+        <a href="19.html">
+            <button>上一页,文件名</button>
+        </a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="">
+            <button></button>
+        </a>
+    </div>
+</div>
+</body>
+</html>

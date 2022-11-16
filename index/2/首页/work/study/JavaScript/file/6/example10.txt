@@ -1,0 +1,20 @@
+<!--author:steam-404-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>³Ë·¨±í</title>
+</head>
+<body>
+<script>
+  let message="";
+  for (let i=1;i<=9;i++){
+    for (let j=1;j<=i;j++){
+      message+=j+"*"+i+"="+i+"*"+j+" ";
+    }
+    message+="\n";
+  }
+  console.log(message)
+</script>
+</body>
+</html>

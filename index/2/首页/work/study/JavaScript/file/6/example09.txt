@@ -1,0 +1,20 @@
+<!--author:steam-404-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>生成i行j列图案</title>
+</head>
+<body>
+<script>
+  let message="";
+  for (let i=1;i<=5;i++){
+    for (let j=i;j<=5;j++){
+      message+="爱心";
+    }
+    message+="\n";
+  }
+  console.log(message)
+</script>
+</body>
+</html>
