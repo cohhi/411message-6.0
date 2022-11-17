@@ -1,0 +1,22 @@
+<!--author:steam-404-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>给一个数字数组，包含0，将不为0的数据存入新数组</title>
+</head>
+<body>
+<script>
+    let message = [2, 3, 0, 6, 8, 0, 4, 3, 0, 0, 0, 0]
+    let NewMessage = [];
+    for (let i = 0; i < message.length; i++) {
+        if(message[i]!==0){
+            NewMessage+=message[i]
+        }
+    }
+    for (let i=0;i<NewMessage.length;i++){
+        console.log(NewMessage[i])
+    }
+</script>
+</body>
+</html>

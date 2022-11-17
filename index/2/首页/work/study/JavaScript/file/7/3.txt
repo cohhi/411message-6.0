@@ -1,0 +1,20 @@
+<!--author:steam-404-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>使用for循环,求数组里大于5的和</title>
+</head>
+<body>
+<script>
+  let message=[4,9,6,90,3,11]
+  let number=0;
+  for (let i=0;i<message.length;i++){
+    if(message[i]>5){
+      number+=message[i]
+    }
+  }
+  console.log(number)
+</script>
+</body>
+</html>
