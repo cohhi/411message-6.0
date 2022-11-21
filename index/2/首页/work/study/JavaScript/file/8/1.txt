@@ -1,0 +1,6 @@
+<script>
+    function message1(){
+        console.log("我是函数")
+    }
+    message1()  //函数调用
+</script>

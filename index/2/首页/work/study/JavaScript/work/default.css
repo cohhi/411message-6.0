@@ -84,7 +84,7 @@ button:active {
 p{
     text-align: center;
     font-size: 20px;
-    color: #B93AF7;
+    color: #1c1a2e;
 }
 h4{
 }
@@ -128,4 +128,7 @@ hr{
     width: auto;
     height: 3px;
     background: #B93AF7;
+}
+a:hover{
+    color: dodgerblue;
 }
