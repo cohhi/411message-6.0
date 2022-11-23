@@ -1,0 +1,19 @@
+<!--author:steam-404-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>判断是否闰年</title>
+</head>
+<body>
+<script>
+    function isLeapYear(year){
+        if(year%4==0&&year%100!=0||year%400==0){
+            console.log(year+"年是闰年")
+        }else {
+            console.log(year+"年不是闰年")
+        }
+    }
+</script>
+</body>
+</html>

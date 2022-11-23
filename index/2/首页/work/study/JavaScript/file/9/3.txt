@@ -1,0 +1,16 @@
+<!--author:steam-404-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>利用return返回数组</title>
+</head>
+<body>
+<script>
+    console.log(ikun())
+    function ikun(){
+        return ["love you","ikun","steam-404"]
+    }
+</script>
+</body>
+</html>

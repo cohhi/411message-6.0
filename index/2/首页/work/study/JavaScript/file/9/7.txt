@@ -1,0 +1,17 @@
+<!--author:steam-404-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>匿名函数</title>
+</head>
+<body>
+<script>
+
+    let message = function (a,b){
+        return a+b;
+    }
+    console.log(message(1,2))
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!--author:steam-404-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>闭包</title>
+</head>
+<body>
+<script>
+    function ikun() {
+        let time = 0;
+        let c = function () {
+            return ++time
+        }
+        return c;
+    }
+    var count=ikun();
+    console.log(count());
+    console.log(count());
+    console.log(count());
+</script>
+</body>
+</html>

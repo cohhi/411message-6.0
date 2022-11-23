@@ -1,0 +1,24 @@
+<!--author:steam-404-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>求数组最大值</title>
+</head>
+<body>
+<script>
+    let message=[4,7,23,67,2,34,78,7];
+    ikun(message)
+    function ikun(message){
+        let max=message[0];
+        for (let i=0;i<message.length;i++){
+            if(message[i]>max){
+                max=message[i]
+            }
+        }
+    //    鸡你太美
+        console.log("The max number is:"+max)
+    }
+</script>
+</body>
+</html>

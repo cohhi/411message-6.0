@@ -1,0 +1,21 @@
+<!--author:steam-404-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>获取2月份天数</title>
+</head>
+<body>
+<script>
+    let year=prompt("请输入年份")
+    fn(year)
+    function fn(year){
+        if(year%4==0&&year%100!=0||year%400==0){
+            console.log(year+"年是闰年,2月有29天")
+        }else {
+            console.log(year+"年不是闰年,2月有28天")
+        }
+    }
+</script>
+</body>
+</html>

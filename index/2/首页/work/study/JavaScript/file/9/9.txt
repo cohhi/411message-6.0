@@ -1,0 +1,25 @@
+<!--author:steam-404-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>递归调用</title>
+</head>
+<body>
+<script>
+    function message(n) {
+        if (n == 1) {
+            return 1;
+        }
+        return n * message(n-1);
+    }
+
+    var n = prompt("求n的阶乘")
+    if (isNaN(n)) {
+        console.log("N值不合法")
+    } else {
+        console.log(n + "的阶乘为:" + message(n))
+    }
+</script>
+</body>
+</html>
