@@ -1,0 +1,26 @@
+<!--author:steam-404-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>开关灯</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+</head>
+<body>
+<button id="open">开灯</button>
+<button id="shutDown">关灯</button>
+
+<script>
+    $(function (){
+        $("#open").click(function (){
+            $("body").css("background","white")
+        })
+    })
+    $(function (){
+        $("#shutDown").click(function (){
+            $("body").css("background","black")
+        })
+    })
+</script>
+</body>
+</html>

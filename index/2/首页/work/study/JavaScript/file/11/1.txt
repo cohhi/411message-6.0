@@ -1,0 +1,29 @@
+<!--author:steam-404-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="message">
+    <input id="password" type="password"> <img id="eye" onclick="message()" src="hide.svg" alt="">
+</div>
+<script>
+    let eye = document.getElementById("eye")
+    let password=document.getElementById("password")
+    let flag = false  //Ä¬ÈÏ±ÕÑÛ×´Ì¬
+    eye.onclick=function (){
+        if (flag === false) {
+            eye.src="show.svg"
+            password.type="text"
+            flag = true  //ÇÐ»»µ½ÕöÑÛ×´Ì¬
+        } else if (flag === true) {
+            eye.src="hide.svg"
+            password.type="password"
+            flag = false  //ÇÐ»»µ½±ÕÑÛ×´Ì¬
+        }
+    }
+</script>
+</body>
+</html>
