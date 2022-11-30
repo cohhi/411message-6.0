@@ -1,0 +1,48 @@
+<!--author:steam-404-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>手风琴</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+</head>
+<script>
+    $(function (){
+        $("#titleOne").click(function (){
+            $(".one").slideToggle()
+        })
+    })
+    $(function (){
+        $("#titleTwo").click(function (){
+            $(".two").slideToggle()
+        })
+    })
+    $(function (){
+        $("#titleThree").click(function (){
+            $(".three").slideToggle()
+        })
+    })
+</script>
+<body>
+<div class="box">
+    <ul id="one">
+        <p id="titleOne">Web前端</p>
+        <li class="one">JavaScript</li>
+        <li class="one">DIV+CSS</li>
+        <li class="one">JQuery</li>
+    </ul>
+    <ul id="two">
+        <p id="titleTwo">后台脚本</p>
+        <li class="two">PHP</li>
+        <li class="two">ASP.net</li>
+        <li class="two">JSP</li>
+    </ul>
+    <ul id="three">
+        <p id="titleThree">前端框架</p>
+        <li class="three">Extjs</li>
+        <li class="three">Esspress</li>
+        <li class="three">YUI</li>
+    </ul>
+</div>
+</body>
+</html>

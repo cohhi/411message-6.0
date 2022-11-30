@@ -1,0 +1,19 @@
+body{
+    background-color: deeppink;
+}
+p{
+    text-align: center;
+}
+
+.box{
+
+    text-align: center;
+}
+.box h3{
+    text-align: right;
+}
+button{
+    text-align: center;
+    width: 10vh;
+    height: 5vh;
+}
