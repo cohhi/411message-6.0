@@ -1,0 +1,23 @@
+*{
+    padding: 0;
+    margin: 0 auto;
+    background-color: #EDE6C9;
+    text-align: center;
+}
+p{
+    text-align: center;
+    font-size: 5vh;
+    color: #714da6;
+    line-height: 5vh;
+}
+a{
+    font-size: 3vh;
+    line-height: 10vh;
+}
+h3{
+    line-height: 5vh;
+    color: #0FC5D7;
+}
+img{
+    border-radius: 30px;
+}

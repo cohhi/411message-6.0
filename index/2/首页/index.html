@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -8,7 +8,7 @@
     <link rel="icon" href="./image/favicon.ico">
     <script src="jQuery/jQuery.js"></script>
     <!--    引入jquery-->
-    <style type="text/css">
+    <style >
         * {
             padding: 0;
             margin: 0;
@@ -21,9 +21,9 @@
         }
 
         /* 对导航的内容设置一个主体为800px的宽并使其居中 */
-        .clear {
-            clear: both;
-        }
+        /*.clear {*/
+        /*    clear: both;*/
+        /*}*/
 
         /* 清除浮动 */
         a {
@@ -58,17 +58,17 @@
 
 
         /*右下角视频的处理*/
-        .tailRight{
-            position: absolute;
-            right: 0;
-        }
-        .tailRight video{
-            height: 60vh;
-            width: 23vh;
-        }
-        .tailRight video source{
-            border-radius: 30px;
-        }
+        /*.tailRight{*/
+        /*    position: absolute;*/
+        /*    right: 0;*/
+        /*}*/
+        /*.tailRight video{*/
+        /*    height: 60vh;*/
+        /*    width: 23vh;*/
+        /*}*/
+        /*.tailRight video source{*/
+        /*    border-radius: 30px;*/
+        /*}*/
     </style>
     <link rel="stylesheet" href="./css/index.css">
     <script>
@@ -187,10 +187,23 @@
 <div class="tailLeft">
 </div>
 
-<div class="tailRight">
-    <video autoplay="autoplay" controls="controls" >
-        <source type="video/mp4" src="./image/mp4/dance.mp4"></video>
+<!--<div class="tailRight">-->
+<!--    <video autoplay="autoplay" controls="controls" >-->
+<!--        <source type="video/mp4" src="./image/mp4/dance.mp4"></video>-->
+<!--</div>-->
+<p id="java" style="font-size: 100px">java大作业入口</p>
+<div id="message">
+    <p style="font-size: 100px">v我50,告诉你答案</p>
+
 </div>
+<script>
+    $(function (){
+        $("#message").hide()
+    })
+    $("#java").click(function (){
+        $("#message").toggle()
+    })
+</script>
 </body>
 
 </html>
