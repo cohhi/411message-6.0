@@ -1,5 +1,4 @@
-from fileinput import hook_encoded
-
+# author:steam-404
 for i in range(5, 21):
     file = open("{}.html".format(i), "w")
     file.write('<!DOCTYPE html>\n'
