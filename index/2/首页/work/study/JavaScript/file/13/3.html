@@ -1,0 +1,19 @@
+<!--author:steam-404-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>4</title>
+</head>
+<body>
+<p>我已经回家了</p>
+<button id="fixup">修改内容</button>
+<script>
+    let message1 = document.querySelector('p')
+    let message2 = document.getElementById('fixup')
+    message2.onclick = function () {
+        message1.innerText = '你还要上网课'
+    }
+</script>
+</body>
+</html>

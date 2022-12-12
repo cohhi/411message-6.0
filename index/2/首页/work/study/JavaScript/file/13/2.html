@@ -1,0 +1,25 @@
+<!--author:steam-404-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3</title>
+</head>
+<body>
+<button id="ikun">开/关灯</button>
+<script>
+    let message = document.getElementById('ikun')
+    let flag = 'white'
+    message.onclick = function () {
+        if (flag === 'white') {
+            document.body.style.background = 'black'
+            flag = 'black'
+        } else if (flag === 'black') {
+            document.body.style.background = 'white'
+            flag = 'white'
+        }
+    }
+</script>
+</body>
+</html>
+

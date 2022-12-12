@@ -1,0 +1,42 @@
+<!--author:steam-404-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>6</title>
+</head>
+<style>
+    li{
+        float: left;
+        width: 103px;
+        height: 33px;
+        list-style-type: none;
+        background: url("bg1.gif");
+        color: white;
+        text-align: center;
+        line-height: 33px;
+    }
+</style>
+<body>
+<ul>
+    <li>咨询动态</li>
+    <li>产品世界</li>
+    <li>市场直销</li>
+</ul>
+<script>
+    let message=document.querySelectorAll('li')
+    for(let i=0;i<message.length;i++){
+        message[i].onmouseover=function (){
+            console.log("鼠标悬停")
+            this.style.background="url(bg2.gif)"
+        }
+    }
+    for(let i=0;i<message.length;i++){
+        message[i].onmouseout=function (){
+            console.log("鼠标离开")
+            this.style.background="url(bg1.gif)"
+        }
+    }
+</script>
+</body>
+</html>
