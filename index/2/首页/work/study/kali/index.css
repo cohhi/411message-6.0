@@ -1,0 +1,10 @@
+*{
+    padding: 0;
+    margin: auto 0;
+}
+body{
+    background: #BBC1EE;
+    display: flex;
+    justify-content: center;
+    
+}
