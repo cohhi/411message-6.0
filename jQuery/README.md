@@ -6,4 +6,4 @@ jQuery是一个JavaScript库
 
 生产环境: production JQuery v3.6.1
 
-调用jQuery时请使用jQuery\jQuery\jQuery.js
+调用jQuery时请使用jQuery\jQuery\jQuery-v3.6.1.js
