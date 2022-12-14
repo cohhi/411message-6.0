@@ -1,0 +1,49 @@
+<!--author:steam-404-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1</title>
+</head>
+<style>
+
+    img{
+        width: 100px;
+        height: 100px;
+        border: 1px solid rebeccapurple;
+    }
+</style>
+<body>
+    <div>
+        <img id="img1" src="img.png" alt="">
+        <img id="img2" src="img_1.png" alt="">
+        <img id="img3" src="img_2.png" alt="">
+        <br>
+        <button id="message1">visvility方法隐藏</button>
+        <button id="message2">visvility方法显示</button>
+        <br>
+        <button id="message3">display方法隐藏</button>
+        <button id="message4">display方法显示</button>
+    </div>
+    <script>
+        let message1=document.getElementById('message1')
+        let message2=document.getElementById('message2')
+        let message3=document.getElementById('message3')
+        let message4=document.getElementById('message4')
+        let image1=document.getElementById('img1')
+        message1.onclick=function () {
+            image1.style.visibility = 'hidden';
+        }
+        message2.onclick=function (){
+            image1.style.visibility='visible'
+        }
+        message3.onclick=function (){
+            image1.style.display='none'
+        }
+        message4.onclick=function (){
+            image1.style.display='inline'
+        }
+    </script>
+</body>
+</html>
+
