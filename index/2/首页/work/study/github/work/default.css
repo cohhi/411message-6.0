@@ -17,6 +17,10 @@ a{
 h3{
     line-height: 5vh;
     color: #0FC5D7;
+    text-align: left;
+}
+h3 span{
+    color: #6E5EDD;
 }
 img{
     border-radius: 30px;

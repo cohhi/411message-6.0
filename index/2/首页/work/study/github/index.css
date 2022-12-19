@@ -9,5 +9,13 @@ html{
     line-height: 3vh;
 }
 a{
-    display: block;
+
+}
+button{
+    padding: 3vh;
+    border-radius: 30vh;
+    border: 1vh solid #6E5EDD;
+}
+button:hover{
+    background: #00BFFF;
 }
