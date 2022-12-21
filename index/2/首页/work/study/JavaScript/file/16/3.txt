@@ -1,0 +1,63 @@
+<!--author:steam-404-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3</title>
+</head>
+<style>
+    ul{
+        text-align: center;
+        float: left;
+        list-style: none;
+    }
+    li{
+        display: none;
+        border: 2px solid rebeccapurple;
+    }
+</style>
+<body>
+<div class="box">
+    <ul class="ul">
+        微博
+        <li>私信</li>
+        <li>评论</li>
+        <li>@我</li>
+    </ul>
+    <ul class="ul">
+        留言板
+        <li>私信</li>
+        <li>评论</li>
+        <li>@我</li>
+    </ul>
+    <ul class="ul">
+        电话
+        <li>私信</li>
+        <li>评论</li>
+        <li>@我</li>
+    </ul>
+    <ul class="ul">
+        邮箱
+        <li>私信</li>
+        <li>评论</li>
+        <li>@我</li>
+    </ul>
+</div>
+
+<script>
+    let ul=document.querySelectorAll("ul")
+    for (let i=0;i<ul.length;i++){
+        ul[i].onmouseover=function (){
+            this.children[0].style.display="block"
+            this.children[1].style.display="block"
+            this.children[2].style.display="block"
+        }
+        ul[i].onmouseout=function (){
+            this.children[0].style.display="none"
+            this.children[1].style.display="none"
+            this.children[2].style.display="none"
+        }
+    }
+</script>
+</body>
+</html>

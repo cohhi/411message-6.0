@@ -1,0 +1,42 @@
+<!--author:steam-404-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>兄弟节点</title>
+</head>
+<body>
+<div id="box">
+    <p>我是第一个标题</p>
+    <p>我是第二个标题</p>
+    <button id="append">添加节点</button>
+    <button id="appendFirst">首行插入元素</button>
+    <button id="remove">删除节点</button>
+</div>
+<script>
+    let box=document.getElementById("box")
+    let appendFirst=document.getElementById("appendFirst")
+    let append=document.getElementById("append")
+    let remove=document.getElementById("remove")
+    append.onclick=function (){
+        //新建元素
+        //添加元素
+        let newp=document.createElement('p')
+        newp.innerHTML="我是新增的段落";
+        box.appendChild(newp);
+    }
+    appendFirst.onclick=function (){
+        let newp=document.createElement('p')
+        newp.innerHTML="我是插在首行的段落";
+
+        let messgae=box.children[0];
+        box.insertBefore(newp,messgae)
+    }
+    remove.onclick=function (){
+        let message=box.children[0];
+        box.removeChild(message)
+    }
+
+</script>
+</body>
+</html>

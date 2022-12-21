@@ -1,0 +1,42 @@
+<!--author:steam-404-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<style>
+
+</style>
+<body>
+<div id="box">
+    <label for="message"></label><textarea id="message" cols="30"></textarea>
+    <button onclick="button()">发布</button>
+</div>
+<ul id="ul">
+
+</ul>
+<script>
+    function button() {
+        //添加元素
+        let list=document.createElement('li')
+        let result=document.getElementById("message")
+        let message=document.getElementById("ul")
+        if(result.value===''){
+            alert("请输入内容")
+        }else{
+            list.innerHTML=result.value+'<a href="javascript:">删除</a>'
+        }
+        let ul=document.querySelector('ul')
+        ul.insertBefore(list,ul.children[0])
+
+        let a=document.querySelectorAll('a')
+        for (let i=0;i<a.length;i++){
+            a[i].onclick=function (){
+                message.removeChild(this.parentNode)
+            }
+        }
+    }
+</script>
+</body>
+</html>
