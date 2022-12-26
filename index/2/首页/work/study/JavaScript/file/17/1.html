@@ -1,0 +1,99 @@
+<!--author:steam-404-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1</title>
+</head>
+<style>
+    table {
+        border: 1px solid black;
+        border-collapse: collapse;
+        text-align: center;
+    }
+
+    td {
+        border: 1px solid black;
+        text-align: center;
+    }
+</style>
+<body>
+<table id="table">
+    <tr>
+        <td>商品名称</td>
+        <td>数量</td>
+        <td>价格</td>
+        <td>
+            操作
+        </td>
+    </tr>
+    <tr class="tr">
+        <td>仿真休闲皮鞋</td>
+        <td>12</td>
+        <td>￥568.50</td>
+        <td>
+            <button onclick="remove(this)">删除</button>
+            <button onclick="fixup(this)">修改</button>
+        </td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <td colspan="4">
+            <button id="append">增加订单</button>
+        </td>
+    </tr>
+</table>
+<script>
+    let append = document.getElementById("append")
+    let table = document.getElementById("table")
+    append.onclick = function () {
+        let newTr = document.createElement("tr")
+        newTr.innerHTML = "" +
+            "<td>仿真休闲皮鞋</td>\n" +
+            "        <td>12</td>\n" +
+            "        <td>￥568.50</td>\n" +
+            "        <td>\n" +
+            "<button onclick=\"remove(this)\">删除</button>\n" +
+            "<button onclick=\"fixup(this)\">修改</button>\n" +
+            "        </td>"
+        table.appendChild(newTr)
+    }
+
+    function remove(object) {
+        let tr = object.parentNode.parentNode;
+        tr.parentNode.removeChild(tr);
+    }
+
+    function fixup(object) {
+        let tr=object.parentNode.parentNode;
+        let td=tr.children;
+        console.log(td)
+        let tdName=td[0];
+        let tdNumber=td[1];
+        let tdPrice=td[2];
+
+        // console.log(tr)
+        let userChoose=prompt("1.修改商品名称" +
+            "2.修改数量" +
+            "3.修改价格");
+        switch (userChoose){
+            case "1":
+                let name=prompt("请输入商品名称")
+                tdName.innerHTML=name
+                break
+            case "2":
+                let number=prompt("请输入商品数量")
+                tdNumber.innerHTML=number
+                break
+            case "3":
+                let price=prompt("请输入商品价格")
+                tdPrice.innerHTML="￥"+price
+                break
+            default:
+                alert("error")
+        }
+    }
+</script>
+</body>
+</html>
